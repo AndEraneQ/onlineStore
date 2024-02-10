@@ -1,4 +1,6 @@
 package org.onlineStorePackage.menu;
+import org.onlineStorePackage.authentication.Login;
+import org.onlineStorePackage.authentication.Register;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Menu {
@@ -18,10 +20,12 @@ public class Menu {
             userChoise = scanner.nextInt();
             switch (userChoise) {
                 case 1:
-
+                    Login login = new Login();
+                    login.run();
                     break;
                 case 2:
-
+                    Register register = new Register();
+                    register.run();
                     break;
                 case 3:
                     System.out.println("Thank you, see you soon!");
