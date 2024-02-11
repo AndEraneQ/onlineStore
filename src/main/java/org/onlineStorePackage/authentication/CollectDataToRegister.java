@@ -1,12 +1,14 @@
 package org.onlineStorePackage.authentication;
 import org.onlineStorePackage.SQL.SqlRegister;
+import org.onlineStorePackage.users.User;
 import java.util.InputMismatchException;
 import java.util.regex.Pattern;
 import java.util.Scanner;
 
-public class CollectDataToRegister extends DataToRegister{
+public class CollectDataToRegister {
     private Scanner scanner = new Scanner(System.in);
     private CheckDataToRegister checkDataToRegister = new CheckDataToRegister();
+    protected User user = new User();
     public String collectDataWithOnlyLenghtCheck(String typeOfData, int minLenght){
         boolean dataIsCorrect = false;
         String data ="";
@@ -25,14 +27,14 @@ public class CollectDataToRegister extends DataToRegister{
         while(!loginFreeAndCorrect){
             System.out.println("Type login");
             String loginToCheck = scanner.nextLine();
-            if(!checkDataToRegister.stringLengthError(loginToCheck,6) && !sqlRegister.userExistError(loginToCheck)){
-                setLogin(loginToCheck);
+            if(!checkDataToRegister.stringLengthError(loginToCheck,6) && !sqlRegister.dataExistError(loginToCheck)){
+                user.setLogin(loginToCheck);
                 loginFreeAndCorrect=true;
             }
         }
     }
     public void collectPassword(){
-        setPassword(collectDataWithOnlyLenghtCheck("Password",8));
+        user.setPassword(collectDataWithOnlyLenghtCheck("Password",8));
     }
     public void collectEmail(){
         boolean emailIsCorrect = false;
@@ -41,15 +43,15 @@ public class CollectDataToRegister extends DataToRegister{
             String emailToCheck = scanner.nextLine();
             if(!checkDataToRegister.stringLengthError(emailToCheck,8) && checkDataToRegister.stringContinesSymbol(emailToCheck,'@')){
                 emailIsCorrect=true;
-                setEmail(emailToCheck);
+                user.setEmail(emailToCheck);
             }
         }
     }
     public void collectFirstName() {
-        setFirstName(collectDataWithOnlyLenghtCheck("First Name",3));
+        user.setFirstName(collectDataWithOnlyLenghtCheck("First Name",3));
     }
     public void collectLastName() {
-        setLastName(collectDataWithOnlyLenghtCheck("Last Name", 3));
+        user.setLastName(collectDataWithOnlyLenghtCheck("Last Name", 3));
     }
     public void collectSex(){
         boolean sexIsCorrect = false;
@@ -58,7 +60,7 @@ public class CollectDataToRegister extends DataToRegister{
             String sexToCheck = scanner.nextLine();
             if(sexToCheck.length()==1 && (sexToCheck.equals("M") || sexToCheck.equals("F"))) {
                 sexIsCorrect = true;
-                setSex(sexToCheck);
+                user.setSex(sexToCheck);
             }
             else{
                 System.out.println("Type correct character.");
@@ -72,7 +74,7 @@ public class CollectDataToRegister extends DataToRegister{
             System.out.println("Type date of birth (YYYY-MM-DD):");
             String dateOfBirthToCheck = scanner.nextLine();
             if (dateOfBirthPattern.matcher(dateOfBirthToCheck).matches()) {
-                setDateOfBirth(dateOfBirthToCheck);
+                user.setDateOfBirth(dateOfBirthToCheck);
                 dateOfBirthIsCorrect = true;
             } else {
                 System.out.println("Invalid date. Please use YYYY-MM-DD.");
@@ -80,14 +82,16 @@ public class CollectDataToRegister extends DataToRegister{
         }
     }
     public void collectPhoneNumber(){
+        SqlRegister sqlRegister = new SqlRegister();
         boolean phoneNumberIsCorrect = false;
         while(!phoneNumberIsCorrect){
             System.out.println("Type phone number: ");
             try {
-                long phoneNumberToCheck = scanner.nextLong();
+                int phoneNumberToCheck = scanner.nextInt();
+                scanner.nextLine();
                 if(phoneNumberToCheck>=100000000 && phoneNumberToCheck<=999999999){
+                    user.setPhoneNumber(phoneNumberToCheck);
                     phoneNumberIsCorrect=true;
-                    scanner.nextLine();
                 }
                 else{
                     System.out.println("Wrong phone number. Try again");
@@ -97,5 +101,8 @@ public class CollectDataToRegister extends DataToRegister{
                 scanner.nextLine();
             }
         }
+    }
+    public void closeScanner(){
+        scanner.close();
     }
 }

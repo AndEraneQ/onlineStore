@@ -1,6 +1,6 @@
-package org.onlineStorePackage.authentication;
+package org.onlineStorePackage.users;
 
-public class DataToRegister {
+public class PersonData {
     protected String login;
     protected String password;
     protected String email;
@@ -8,7 +8,7 @@ public class DataToRegister {
     protected String lastName;
     protected String sex;
     protected String dateOfBirth;
-    protected long phoneNumber;
+    protected int phoneNumber;
     public String getPassword() {
         return password;
     }
@@ -55,11 +55,11 @@ public class DataToRegister {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public long getPhoneNumber() {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

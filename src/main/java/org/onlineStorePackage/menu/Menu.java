@@ -4,6 +4,7 @@ import org.onlineStorePackage.authentication.Register;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Menu {
+    private Scanner scanner = new Scanner(System.in);
     private void printOption(){
         System.out.println("Welcome in online store.");
         System.out.println("Select an option: ");
@@ -13,14 +14,13 @@ public class Menu {
         System.out.println("Enter your choose: ");
     }
     public void run(){
-        Scanner scanner = new Scanner(System.in);
-        int userChoise;
+        int userChoice;
         boolean correctChoice = false;
         while(!correctChoice) {
             printOption();
             try {
-                userChoise = scanner.nextInt();
-                switch (userChoise) {
+                userChoice = scanner.nextInt();
+                switch (userChoice) {
                     case 1:
                         Login login = new Login();
                         correctChoice = true;

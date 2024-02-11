@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="113476ce-4d78-4952-8273-d26f1803fdc8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/CollectDataToRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/CollectDataToRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/DataToRegister.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/Menu.java" afterDir="false" />
     </list>
@@ -19,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -75,7 +77,7 @@
       <workItem from="1707578621889" duration="6870000" />
       <workItem from="1707594546275" duration="1446000" />
       <workItem from="1707596003304" duration="3790000" />
-      <workItem from="1707641046263" duration="8594000" />
+      <workItem from="1707641046263" duration="17076000" />
     </task>
     <servers />
   </component>
@@ -88,6 +90,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
