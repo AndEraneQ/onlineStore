@@ -12,17 +12,17 @@ public class SqlLogin extends SqlConnections {
     public String getTypeOfUser(){
         return typeOfUser;
     }
-    public boolean correctLoginAndPasswordCheck(String Login,String Password){
+    public boolean correctLoginAndPasswordCheck(String login,String password){
         try{
             Connection connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);
             String sql = "SELECT Password, typeOfUser FROM users WHERE login = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setString(1, Login);
+            statement.setString(1, login);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 String storedPassword = resultSet.getString("password");
                 setTypeOfUser(resultSet.getString("typeOfUser"));
-                if (storedPassword.equals(Password)) {
+                if (storedPassword.equals(password)) {
                     return true;
                 }
             }

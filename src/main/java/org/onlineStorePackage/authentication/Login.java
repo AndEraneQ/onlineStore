@@ -4,7 +4,7 @@ import org.onlineStorePackage.SQL.SqlLogin;
 public class Login {
     private String login;
     private String password;
-    private void loginInterface(){
+    private void loginCollectData(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type login: ");
         this.login = scanner.nextLine();
@@ -13,7 +13,7 @@ public class Login {
         scanner.close();
     }
     public void run(){
-        loginInterface();
+        loginCollectData();
         SqlLogin connection = new SqlLogin();
         if(connection.correctLoginAndPasswordCheck(login,password) && connection.getTypeOfUser().equals("admin")){
             System.out.println("tak");

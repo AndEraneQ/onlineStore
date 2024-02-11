@@ -15,31 +15,35 @@ public class Menu {
     public void run(){
         Scanner scanner = new Scanner(System.in);
         int userChoise;
-        printOption();
-        try {
-            userChoise = scanner.nextInt();
-            switch (userChoise) {
-                case 1:
-                    Login login = new Login();
-                    login.run();
-                    break;
-                case 2:
-                    Register register = new Register();
-                    register.run();
-                    break;
-                case 3:
-                    System.out.println("Thank you, see you soon!");
-                    break;
-                default:
-                    System.out.println("Invalid choose. Please try again");
-                    run();
-                    break;
+        boolean correctChoice = false;
+        while(!correctChoice) {
+            printOption();
+            try {
+                userChoise = scanner.nextInt();
+                switch (userChoise) {
+                    case 1:
+                        Login login = new Login();
+                        correctChoice = true;
+                        login.run();
+                        break;
+                    case 2:
+                        Register register = new Register();
+                        correctChoice = true;
+                        register.run();
+                        break;
+                    case 3:
+                        System.out.println("Thank you, see you soon!");
+                        correctChoice = true;
+                        break;
+                    default:
+                        System.out.println("Invalid choose. Please try again");
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("You need to write a number! Please try again");
+                scanner.nextLine();
             }
         }
-            catch(InputMismatchException e){
-                System.out.println("You need to write a number! Please try again");
-                run();
-            }
         scanner.close();
     }
 }
