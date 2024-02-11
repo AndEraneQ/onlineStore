@@ -1,8 +1,6 @@
 package org.onlineStorePackage.authentication;
-import org.onlineStorePackage.menu.Menu;
+import org.onlineStorePackage.menu.StartingMenu;
 import org.onlineStorePackage.SQL.SqlRegister;
-import java.sql.SQLException;
-import java.util.Scanner;
 
 public class Register extends CollectDataToRegister{
     private void registerCollectData(){
@@ -16,12 +14,12 @@ public class Register extends CollectDataToRegister{
         collectPhoneNumber();
     }
     public void menuAfterRegister(){
-        Menu postRegisterMenu = new Menu();
+        StartingMenu postRegisterMenu = new StartingMenu();
         postRegisterMenu.run();
     }
     public void addUserToDataBase(){
         SqlRegister sqlRegister = new SqlRegister();
-        if(sqlRegister.addUserToDatabase(user)){
+        if(sqlRegister.userDataBaseAddUser(user) && sqlRegister.accountBalanceDataBaseAddUser(user)){
             System.out.println("Registered successfully.");
         }
         else{

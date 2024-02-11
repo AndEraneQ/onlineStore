@@ -23,7 +23,7 @@ public class SqlRegister extends SqlConnections{
         }
         return false;
     }
-    public boolean addUserToDatabase(User user)  {
+    public boolean userDataBaseAddUser(User user)  {
         try {
             Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
             String sql = "INSERT INTO users VALUES (?,?,?,?,?,?,?,?,?)";
@@ -40,9 +40,22 @@ public class SqlRegister extends SqlConnections{
             if (statement.executeUpdate() > 0) {
                 return true;
             }
-            else{
                 return false;
+        } catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
+    public boolean accountBalanceDataBaseAddUser(User user){
+        try{
+            Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
+            String sql = "INSERT INTO accountBalance VALUES (?,?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, user.getLogin());
+            statement.setString(2, String.valueOf(0.00));
+            if (statement.executeUpdate() > 0) {
+                return true;
             }
+                return false;
         } catch (SQLException e){
             throw new RuntimeException(e);
         }

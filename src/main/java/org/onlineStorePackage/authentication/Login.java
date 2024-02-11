@@ -1,4 +1,5 @@
 package org.onlineStorePackage.authentication;
+import org.onlineStorePackage.menu.UserMenu;
 import java.util.Scanner;
 import org.onlineStorePackage.SQL.SqlLogin;
 public class Login {
@@ -10,19 +11,23 @@ public class Login {
         this.login = scanner.nextLine();
         System.out.println("Type password:");
         this.password = scanner.nextLine();
-        scanner.close();
     }
     public void run(){
-        loginCollectData();
-        SqlLogin connection = new SqlLogin();
-        if(connection.correctLoginAndPasswordCheck(login,password) && connection.getTypeOfUser().equals("admin")){
-            System.out.println("tak");
-        }
-        else if(connection.correctLoginAndPasswordCheck(login,password) && connection.getTypeOfUser().equals("user")){
-            System.out.println(("TakTak"));
-        }
-        else{
-            System.out.println("Nie");
+        boolean loggedIn = false;
+        while(!loggedIn) {
+            loginCollectData();
+            SqlLogin connectionToDatabase = new SqlLogin();
+            if (connectionToDatabase.correctLoginAndPasswordCheck(login, password) && connectionToDatabase.getTypeOfUser().equals("admin")) {
+                loggedIn=true;
+                System.out.println("tak");
+            } else if (connectionToDatabase.correctLoginAndPasswordCheck(login, password) && connectionToDatabase.getTypeOfUser().equals("user")) {
+                loggedIn=true;
+                System.out.println(("TakTak"));
+                UserMenu userMenu = new UserMenu();
+                userMenu.run(login);
+            } else {
+                System.out.println("Incorrect login or password. Try again");
+            }
         }
     }
 }

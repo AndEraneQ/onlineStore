@@ -3,7 +3,7 @@ import org.onlineStorePackage.authentication.Login;
 import org.onlineStorePackage.authentication.Register;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-public class Menu {
+public class StartingMenu {
     private Scanner scanner = new Scanner(System.in);
     private void printOption(){
         System.out.println("Welcome in online store.");

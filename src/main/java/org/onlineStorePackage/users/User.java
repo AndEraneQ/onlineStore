@@ -1,5 +1,4 @@
 package org.onlineStorePackage.users;
-
 public class User extends PersonData{
     public User(String login,String password,String email,String firstName,String lastName,String sex,String dateOfBirth, int phoneNumber){
         this.login=login;
