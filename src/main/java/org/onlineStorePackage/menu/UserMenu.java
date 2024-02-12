@@ -1,12 +1,10 @@
 package org.onlineStorePackage.menu;
-import org.onlineStorePackage.users.UsersActions;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserMenu {
     private Scanner scanner = new Scanner(System.in);
-    private UsersActions usersActions = new UsersActions();
     private void printStartMenu(){
         System.out.println("Choose an option:");
         System.out.println("1 - Go to the shop");
@@ -17,6 +15,7 @@ public class UserMenu {
         System.out.println("6 - Exit");
     }
     private void printManageBudgetMenu(){
+        System.out.println("Manage you budget!!!");
         System.out.println("1 - Deposit money");
         System.out.println("2 - Withdraw money");
         System.out.println("3 - Check your balance");
@@ -25,22 +24,23 @@ public class UserMenu {
     public void run(String login){
         System.out.println("Welcome in " + login  + " account.");
         int userChoice;
-        boolean correctChoice = false;
-        while(!correctChoice) {
+        boolean userCorrectChoice = false;
+        while(!userCorrectChoice) {
             printStartMenu();
             try {
-                userChoice = scanner.nextInt();
-                switch (userChoice) {
+                int taskChoosenByUser = scanner.nextInt();
+                switch (taskChoosenByUser) {
                     case 1:
                         break;
                     case 2:
                         int choice;
-                        boolean isChoiceCorrect = false;
-                        while(!isChoiceCorrect){
+                        boolean userWantBack = false;
+                        UserChoicesMenu userChoicesMenu = new UserChoicesMenu();
+                        while(!userWantBack){
                             printManageBudgetMenu();
                             try {
                                 choice = scanner.nextInt();
-                                isChoiceCorrect = usersActions.ifManageBudgedRun(choice,login);
+                                userWantBack = userChoicesMenu.ifManageBudgedRun(choice,login);
                             } catch (InputMismatchException e) {
                                 System.out.println("You need to write a number! Please try again");
                                 scanner.nextLine();
@@ -52,12 +52,12 @@ public class UserMenu {
                     case 4:
                         break;
                     case 5:
-                        correctChoice = true;
+                        userCorrectChoice = true;
                         StartingMenu startingMenu = new StartingMenu();
                         startingMenu.run();
                         break;
                     case 6:
-                        correctChoice = true;
+                        userCorrectChoice = true;
                         System.out.println("Thank you, see you soon!");
                         break;
                     default:

@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="113476ce-4d78-4952-8273-d26f1803fdc8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/StartingMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/UsersActions.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +76,9 @@
       <workItem from="1707596003304" duration="3790000" />
       <workItem from="1707641046263" duration="17187000" />
       <workItem from="1707676468166" duration="4235000" />
-      <workItem from="1707681294075" duration="7484000" />
+      <workItem from="1707681294075" duration="8153000" />
+      <workItem from="1707692345616" duration="1404000" />
+      <workItem from="1707725248716" duration="4524000" />
     </task>
     <servers />
   </component>

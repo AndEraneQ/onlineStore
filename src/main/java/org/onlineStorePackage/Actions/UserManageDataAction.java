@@ -1,44 +1,13 @@
-package org.onlineStorePackage.users;
+package org.onlineStorePackage.Actions;
+
 import org.onlineStorePackage.SQL.SqlConnections;
 
 import java.sql.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class UsersActions extends SqlConnections {
+public class UserManageDataAction extends SqlConnections {
     private Scanner scanner = new Scanner(System.in);
-    public void changeDataRun() {
-
-    }
-
-    public void showHistoryRun() {
-
-    }
-
-    public boolean ifManageBudgedRun(int choice, String login) {
-        switch (choice) {
-            case 1:
-                depositOrWithdrawMoney(login,'+');
-                return true;
-            case 2:
-                depositOrWithdrawMoney(login,'-');
-                return true;
-            case 3:
-                System.out.println("Your balance is " + checkMoneyBalance(login));
-                return true;
-            case 4:
-                System.out.println("Backing to menu.");
-                return true;
-            default:
-                System.out.println("Invalid choice. Try again");
-                return false;
-        }
-    }
-
-    public void goToShopRun() {
-
-    }
-
     public double checkMoneyBalance(String login) {
         try {
             Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
@@ -57,21 +26,19 @@ public class UsersActions extends SqlConnections {
     public void depositOrWithdrawMoney(String login,Character operation){
         boolean moneyIsCorrect = false;
         String money = null;
-        Double moneyToDouble = null;
         while(!moneyIsCorrect) {
             System.out.println("Type how much: ");
             money = scanner.nextLine();
-            moneyToDouble = Double.parseDouble(money);
             Double currentMoneyInAccount = checkMoneyBalance(login);
             try {
-                if(operation.equals('-') && moneyToDouble>currentMoneyInAccount) {
+                if (money.startsWith("0") || !money.matches("[0-9]+(\\.[0-9]{1,2})?")) {
+                    System.out.println("Wrong type of number. Please type it correctly");
+                }
+                else if (operation == '-' && Double.parseDouble(money) > currentMoneyInAccount) {
                     System.out.println("Your balance is " + currentMoneyInAccount + ". Please type correct number.");
                 }
-                else if(!money.startsWith("0") && money.matches("\\d+(\\.\\d{1,2})?")){
-                    moneyIsCorrect=true;
-                }
-                else{
-                    System.out.println("Wrong type of number. Please type it correctly");
+                else {
+                    moneyIsCorrect = true;
                 }
             } catch (InputMismatchException e) {
                 System.out.println("You need to write a number! Please try again");
@@ -82,6 +49,7 @@ public class UsersActions extends SqlConnections {
             Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
             String sql = "UPDATE accountBalance SET balance = balance " + operation + " ? WHERE login = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
+            Double moneyToDouble = Double.parseDouble(money);
             statement.setDouble(1,moneyToDouble);
             statement.setString(2,login);
             if(statement.executeUpdate()>0){
@@ -95,3 +63,4 @@ public class UsersActions extends SqlConnections {
         }
     }
 }
+
