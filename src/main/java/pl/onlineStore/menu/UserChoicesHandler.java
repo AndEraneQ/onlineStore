@@ -1,10 +1,10 @@
-package org.onlineStorePackage.menu;
+package pl.onlineStore.menu;
 
-import org.onlineStorePackage.Actions.UserManageDataAction;
+import pl.onlineStore.Actions.UserManageBudgetAction;
 
 import java.util.Scanner;
 
-public class UserChoicesMenu {
+public class UserChoicesHandler {
     private Scanner scanner = new Scanner(System.in);
 
     public void changeDataRun() {
@@ -19,17 +19,17 @@ public class UserChoicesMenu {
 
     }
 
-    public boolean ifManageBudgedRun(int choice, String login) {
-        UserManageDataAction userManageDataAction = new UserManageDataAction();
+    public boolean ifManageBudgedRun(int choice) {
+        UserManageBudgetAction userManageDataAction = new UserManageBudgetAction();
         switch (choice) {
             case 1:
-                userManageDataAction.depositOrWithdrawMoney(login, '+');
+                userManageDataAction.depositOrWithdrawMoney('+');
                 break;
             case 2:
-                userManageDataAction.depositOrWithdrawMoney(login, '-');
+                userManageDataAction.depositOrWithdrawMoney('-');
                 break;
             case 3:
-                System.out.println("Your balance is " + userManageDataAction.checkMoneyBalance(login));
+                System.out.println("Your balance is " + userManageDataAction.checkMoneyBalance());
                 break;
             case 4:
                 System.out.println("Backing to menu.");

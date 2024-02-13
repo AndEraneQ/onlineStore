@@ -1,6 +1,6 @@
-package org.onlineStorePackage.users;
+package pl.onlineStore.users;
 
-public class PersonData {
+public class Person {
     protected String login;
     protected String password;
     protected String email;
@@ -9,12 +9,16 @@ public class PersonData {
     protected String sex;
     protected String dateOfBirth;
     protected int phoneNumber;
+    protected String typeOfUser;
+
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
+
     public String getEmail() {
         return email;
     }
@@ -44,7 +48,7 @@ public class PersonData {
     }
 
     public void setSex(String sex) {
-        this.sex=sex;
+        this.sex = sex;
     }
 
     public String getDateOfBirth() {
@@ -69,5 +73,37 @@ public class PersonData {
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public String getTypeOfUser() {
+        return typeOfUser;
+    }
+
+    public void setTypeOfUser(String typeOfUser) {
+        this.typeOfUser = typeOfUser;
+    }
+
+    public Person(String login, String password, String email, String firstName, String lastName, String sex, String dateOfBirth, int phoneNumber, String typeOfUser) {
+        this.login = login;
+        this.password = password;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sex = sex;
+        this.dateOfBirth = dateOfBirth;
+        this.phoneNumber = phoneNumber;
+        this.typeOfUser = typeOfUser;
+
+    }
+
+    public Person() {
+        this.login = null;
+        this.password = null;
+        this.email = null;
+        this.firstName = null;
+        this.lastName = null;
+        this.sex = null;
+        this.dateOfBirth = null;
+        this.phoneNumber = 0;
     }
 }

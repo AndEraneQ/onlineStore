@@ -1,10 +1,13 @@
-package org.onlineStorePackage.menu;
+package pl.onlineStore.menu;
+import pl.onlineStore.Singletons.UserDataSingleton;
+import pl.onlineStore.users.User;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserMenu {
     private Scanner scanner = new Scanner(System.in);
+    private User user = UserDataSingleton.getInstance().getUser();
     private void printStartMenu(){
         System.out.println("Choose an option:");
         System.out.println("1 - Go to the shop");
@@ -21,8 +24,9 @@ public class UserMenu {
         System.out.println("3 - Check your balance");
         System.out.println("4 - Back");
     }
-    public void run(String login){
-        System.out.println("Welcome in " + login  + " account.");
+    public void run(){
+        System.out.println("Welcome in " + user.getLogin() + " account.");
+        System.out.println(user.getLogin());
         int userChoice;
         boolean userCorrectChoice = false;
         while(!userCorrectChoice) {
@@ -35,12 +39,12 @@ public class UserMenu {
                     case 2:
                         int choice;
                         boolean userWantBack = false;
-                        UserChoicesMenu userChoicesMenu = new UserChoicesMenu();
+                        UserChoicesHandler userChoicesMenu = new UserChoicesHandler();
                         while(!userWantBack){
                             printManageBudgetMenu();
                             try {
                                 choice = scanner.nextInt();
-                                userWantBack = userChoicesMenu.ifManageBudgedRun(choice,login);
+                                userWantBack = userChoicesMenu.ifManageBudgedRun(choice);
                             } catch (InputMismatchException e) {
                                 System.out.println("You need to write a number! Please try again");
                                 scanner.nextLine();

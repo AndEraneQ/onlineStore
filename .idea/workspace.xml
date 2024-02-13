@@ -4,15 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="113476ce-4d78-4952-8273-d26f1803fdc8" name="Changes" comment="">
+    <list default="true" id="113476ce-4d78-4952-8273-d26f1803fdc8" name="Changes" comment="asas">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Actions/UserManageBudgetAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Login/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Login/LoginSqlConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/UserMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/UsersActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/Actions/UserManageDataAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlConnections.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/RegisterSqlConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/CheckDataToRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/CheckDataToRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/CollectDataToRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/CollectDataToRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/StartingMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/StartingMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/UserChoicesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserChoicesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/AdminActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/PersonData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -79,11 +109,51 @@
       <workItem from="1707681294075" duration="8153000" />
       <workItem from="1707692345616" duration="1404000" />
       <workItem from="1707725248716" duration="4524000" />
+      <workItem from="1707752116237" duration="2072000" />
+      <workItem from="1707762336330" duration="1002000" />
+      <workItem from="1707832481760" duration="10717000" />
+      <workItem from="1707857031488" duration="880000" />
     </task>
+    <task id="LOCAL-00001" summary="asas">
+      <option name="closed" value="true" />
+      <created>1707736863519</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707736863519</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="asas" />
+    <option name="LAST_COMMIT_MESSAGE" value="asas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

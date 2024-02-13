@@ -1,10 +1,11 @@
-package org.onlineStorePackage.SQL;
-import org.onlineStorePackage.users.User;
+package pl.onlineStore.Register;
+import pl.onlineStore.SQL.DataToConnectToSql;
+import pl.onlineStore.users.User;
 
 import java.sql.*;
 
-public class SqlRegister extends SqlConnections{
-    public boolean dataExistError(String loginToCheck){
+public class RegisterSqlConnection implements DataToConnectToSql {
+    public boolean userExistError(String loginToCheck){
         try {
             Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
             String sql = "SELECT login, typeOfUser FROM users WHERE login = ?";
@@ -23,7 +24,7 @@ public class SqlRegister extends SqlConnections{
         }
         return false;
     }
-    public boolean userDataBaseAddUser(User user)  {
+    public boolean addUserToUserDataBase(User user)  {
         try {
             Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
             String sql = "INSERT INTO users VALUES (?,?,?,?,?,?,?,?,?)";
@@ -40,12 +41,12 @@ public class SqlRegister extends SqlConnections{
             if (statement.executeUpdate() > 0) {
                 return true;
             }
-                return false;
         } catch (SQLException e){
             throw new RuntimeException(e);
         }
+        return false;
     }
-    public boolean accountBalanceDataBaseAddUser(User user){
+    public boolean addUserToAccountBalanceDataBase(User user){
         try{
             Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
             String sql = "INSERT INTO accountBalance VALUES (?,?)";
@@ -55,9 +56,9 @@ public class SqlRegister extends SqlConnections{
             if (statement.executeUpdate() > 0) {
                 return true;
             }
-                return false;
         } catch (SQLException e){
             throw new RuntimeException(e);
         }
+        return false;
     }
 }

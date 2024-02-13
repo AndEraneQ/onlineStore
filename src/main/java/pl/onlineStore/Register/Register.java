@@ -1,8 +1,7 @@
-package org.onlineStorePackage.authentication;
-import org.onlineStorePackage.menu.StartingMenu;
-import org.onlineStorePackage.SQL.SqlRegister;
+package pl.onlineStore.Register;
+import pl.onlineStore.menu.StartingMenu;
 
-public class Register extends CollectDataToRegister{
+public class Register extends CollectDataToRegister {
     private void registerCollectData(){
         collectLogin();
         collectPassword();
@@ -18,11 +17,10 @@ public class Register extends CollectDataToRegister{
         postRegisterMenu.run();
     }
     public void addUserToDataBase(){
-        SqlRegister sqlRegister = new SqlRegister();
-        if(sqlRegister.userDataBaseAddUser(user) && sqlRegister.accountBalanceDataBaseAddUser(user)){
+        RegisterSqlConnection sqlRegister = new RegisterSqlConnection();
+        if(sqlRegister.addUserToUserDataBase(user) && sqlRegister.addUserToAccountBalanceDataBase(user)){
             System.out.println("Registered successfully.");
-        }
-        else{
+        } else{
             System.out.println("Mistake of registration.");
         }
     }

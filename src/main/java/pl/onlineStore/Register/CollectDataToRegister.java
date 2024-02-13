@@ -1,6 +1,6 @@
-package org.onlineStorePackage.authentication;
-import org.onlineStorePackage.SQL.SqlRegister;
-import org.onlineStorePackage.users.User;
+package pl.onlineStore.Register;
+import pl.onlineStore.users.User;
+
 import java.util.InputMismatchException;
 import java.util.regex.Pattern;
 import java.util.Scanner;
@@ -22,12 +22,12 @@ public class CollectDataToRegister {
         return data;
     }
     public void collectLogin(){
-        SqlRegister sqlRegister = new SqlRegister();
+        RegisterSqlConnection sqlRegister = new RegisterSqlConnection();
         boolean loginFreeAndCorrect = false;
         while(!loginFreeAndCorrect){
             System.out.println("Type login");
             String loginToCheck = scanner.nextLine();
-            if(!checkDataToRegister.stringLengthError(loginToCheck,6) && !sqlRegister.dataExistError(loginToCheck)){
+            if(!checkDataToRegister.stringLengthError(loginToCheck,6) && !sqlRegister.userExistError(loginToCheck)){
                 user.setLogin(loginToCheck);
                 loginFreeAndCorrect=true;
             }
@@ -82,7 +82,7 @@ public class CollectDataToRegister {
         }
     }
     public void collectPhoneNumber(){
-        SqlRegister sqlRegister = new SqlRegister();
+        RegisterSqlConnection sqlRegister = new RegisterSqlConnection();
         boolean phoneNumberIsCorrect = false;
         while(!phoneNumberIsCorrect){
             System.out.println("Type phone number: ");

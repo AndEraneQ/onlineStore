@@ -1,6 +1,7 @@
-package org.onlineStorePackage.menu;
-import org.onlineStorePackage.authentication.Login;
-import org.onlineStorePackage.authentication.Register;
+package pl.onlineStore.menu;
+import pl.onlineStore.Login.Login;
+import pl.onlineStore.Register.Register;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class StartingMenu {
