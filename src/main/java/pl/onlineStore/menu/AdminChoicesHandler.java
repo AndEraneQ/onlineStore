@@ -1,6 +1,7 @@
 package pl.onlineStore.menu;
 
 import pl.onlineStore.AdminActions.AddOrDeleteAdminRightsAction;
+import pl.onlineStore.AdminActions.AddOrDeleteItemsAction;
 import pl.onlineStore.AdminActions.AddOrDeleteShoppingCategory;
 
 import java.util.InputMismatchException;
@@ -47,7 +48,37 @@ public class AdminChoicesHandler {
             } while (!choiceIsCorrect || choice!=3) ;
         }
         public void addOrDeleteItemsInShop(){
-
+            int choice = 0;
+            boolean choiceIsCorrect;
+            do {
+                choiceIsCorrect = true;
+                printAddOrDeleteMenu("item");
+                try {
+                    choice = scanner.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("You need to write a number! Please try again");
+                    choiceIsCorrect = false;
+                    scanner.nextLine();
+                }
+                if (choiceIsCorrect) {
+                    AddOrDeleteItemsAction addOrDeleteItemsAction = new AddOrDeleteItemsAction();
+                    switch (choice) {
+                        case 1:
+                            addOrDeleteItemsAction.addItem();
+                            break;
+                        case 2:
+                            addOrDeleteItemsAction.removeItem();
+                            break;
+                        case 3:
+                            System.out.println("Backing to menu.");
+                            return;
+                        default:
+                            System.out.println("Invalid choice. Try again");
+                            choiceIsCorrect =false;
+                            break;
+                    }
+                }
+            } while (!choiceIsCorrect || choice!=3) ;
         }
         public void addOrSubstractExistingItemInShop(){
 
