@@ -34,8 +34,7 @@ public class StartingMenu {
                         break;
                     case 3:
                         System.out.println("Thank you, see you soon!");
-                        correctChoice = true;
-                        break;
+                        return;
                     default:
                         System.out.println("Invalid choose. Please try again");
                         break;

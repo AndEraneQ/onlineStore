@@ -1,7 +1,7 @@
 package pl.onlineStore.Register;
 import pl.onlineStore.menu.StartingMenu;
 
-public class Register extends CollectDataToRegister {
+public class Register extends CollectDataFromUser {
     private void registerCollectData(){
         collectLogin();
         collectPassword();

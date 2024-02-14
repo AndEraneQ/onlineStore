@@ -9,7 +9,7 @@ import pl.onlineStore.users.User;
 public class UserManageBudgetAction implements DataToConnectToSql {
     private Scanner scanner = new Scanner(System.in);
     private User user = UserDataSingleton.getInstance().getUser();
-    private boolean ifUserWantGoBackFunction(){
+    private boolean ifUserWantGoBack(){
         boolean numberIsCorrect = false;
         while(!numberIsCorrect) {
             System.out.println("1 - Go back");
@@ -60,21 +60,21 @@ public class UserManageBudgetAction implements DataToConnectToSql {
             try {
                 if (moneyWrittenByUser.startsWith("0") || !moneyWrittenByUser.matches("[0-9]+(\\.[0-9]{1,2})?")) {
                     System.out.println("Wrong type of number. Please type it correctly");
-                    userWantGoBack = ifUserWantGoBackFunction();
+                    userWantGoBack = ifUserWantGoBack();
                 } else if (operation == '-' && Double.parseDouble(moneyWrittenByUser) > currentMoneyInAccount) {
                     System.out.println("Your balance is " + currentMoneyInAccount + ". Please type correct number.");
-                    userWantGoBack = ifUserWantGoBackFunction();
+                    userWantGoBack = ifUserWantGoBack();
                 } else {
                     moneyIsCorrect = true;
                 }
             } catch (InputMismatchException e) {
                 System.out.println("You need to write a number! Please try again");
                 scanner.nextLine();
-                userWantGoBack = ifUserWantGoBackFunction();
+                userWantGoBack = ifUserWantGoBack();
             }
-            if (userWantGoBack) {
-                return;
-            }
+        }
+        if (userWantGoBack) {
+            return;
         }
         try {
             Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);

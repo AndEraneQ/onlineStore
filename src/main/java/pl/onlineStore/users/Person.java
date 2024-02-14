@@ -106,4 +106,14 @@ public class Person {
         this.dateOfBirth = null;
         this.phoneNumber = 0;
     }
+    public void printYourData(){
+        System.out.println("Login: " + login);
+        System.out.println("Password: " + password);
+        System.out.println("Email: " + email);
+        System.out.println("First name: " + firstName);
+        System.out.println("Last name: " + lastName);
+        System.out.println("Sex: " + sex);
+        System.out.println("Date of birth: " + dateOfBirth);
+        System.out.println("Phone Number: " + phoneNumber);
+    }
 }

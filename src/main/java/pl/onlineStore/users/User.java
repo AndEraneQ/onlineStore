@@ -7,7 +7,7 @@ public class User extends Person {
         this.firstName=firstName;
         this.lastName=lastName;
         this.sex=sex;
-        this.dateOfBirth=dateOfBirth;
+        this.dateOfBirth = dateOfBirth;
         this.phoneNumber=phoneNumber;
     }
     public User(){
@@ -29,5 +29,6 @@ public class User extends Person {
         this.sex=p1.sex;
         this.phoneNumber=p1.phoneNumber;
         this.typeOfUser=p1.typeOfUser;
+        this.dateOfBirth=p1.dateOfBirth;
     }
 }

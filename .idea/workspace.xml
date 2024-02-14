@@ -5,33 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="113476ce-4d78-4952-8273-d26f1803fdc8" name="Changes" comment="asas">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Actions/UserManageBudgetAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Login/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Login/LoginSqlConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/Actions/UserManageDataAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlConnections.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/SQL/SqlRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/RegisterSqlConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/CheckDataToRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/CheckDataToRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/CollectDataToRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/CollectDataToRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/authentication/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/StartingMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/StartingMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/UserChoicesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserChoicesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/menu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/AdminActions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/PersonData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/onlineStorePackage/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Actions/UserManageBudgetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Actions/UserManageBudgetAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/CollectDataToRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/CollectDataFromUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/StartingMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/StartingMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserChoicesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserChoicesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,25 +49,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/troja/OneDrive/Pulpit/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/troja/OneDrive/Pulpit/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -112,7 +95,8 @@
       <workItem from="1707752116237" duration="2072000" />
       <workItem from="1707762336330" duration="1002000" />
       <workItem from="1707832481760" duration="10717000" />
-      <workItem from="1707857031488" duration="880000" />
+      <workItem from="1707857031488" duration="3278000" />
+      <workItem from="1707898067033" duration="11105000" />
     </task>
     <task id="LOCAL-00001" summary="asas">
       <option name="closed" value="true" />
@@ -168,5 +152,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="user" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
