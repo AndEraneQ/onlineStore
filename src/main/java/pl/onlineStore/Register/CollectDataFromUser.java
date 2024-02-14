@@ -29,7 +29,7 @@ public class CollectDataFromUser {
         while(!loginFreeAndCorrect){
             System.out.println("Type login");
             loginToCheck = scanner.nextLine();
-            if(!checkDataToRegister.stringLengthError(loginToCheck,6) && !sqlRegister.userExistError(loginToCheck)){
+            if(!checkDataToRegister.stringLengthError(loginToCheck,6) && !sqlRegister.ifUserExist(loginToCheck)){
                 user.setLogin(loginToCheck);
                 loginFreeAndCorrect=true;
             }

@@ -1,4 +1,4 @@
-package pl.onlineStore.Actions;
+package pl.onlineStore.UserActions;
 import pl.onlineStore.SQL.DataToConnectToSql;
 import pl.onlineStore.Singletons.UserDataSingleton;
 import pl.onlineStore.users.User;

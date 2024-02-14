@@ -5,7 +5,7 @@ import pl.onlineStore.users.User;
 import java.sql.*;
 
 public class RegisterSqlConnection implements DataToConnectToSql {
-    public boolean userExistError(String loginToCheck){
+    public boolean ifUserExist(String loginToCheck){
         try {
             Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
             String sql = "SELECT login, typeOfUser FROM users WHERE login = ?";

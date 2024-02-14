@@ -1,7 +1,7 @@
 package pl.onlineStore.menu;
 
-import pl.onlineStore.Actions.UserManageBudgetAction;
-import pl.onlineStore.Actions.UserManageUserDataAction;
+import pl.onlineStore.UserActions.UserManageBudgetAction;
+import pl.onlineStore.UserActions.UserManageUserDataAction;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

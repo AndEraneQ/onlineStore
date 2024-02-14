@@ -19,7 +19,6 @@ public class UserMenu {
     }
     public void run(){
         System.out.println("Welcome in " + user.getLogin() + " account.");
-        System.out.println(user.getLogin());
         int userChoice = 0;
         boolean userCorrectChoice;
         do{
@@ -56,6 +55,6 @@ public class UserMenu {
                 userCorrectChoice=false;
                 scanner.nextLine();
             }
-        } while(!userCorrectChoice);
+        } while(!userCorrectChoice || userChoice!=5 || userChoice!=6);
     }
 }

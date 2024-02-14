@@ -1,4 +1,4 @@
-package pl.onlineStore.Actions;
+package pl.onlineStore.UserActions;
 import pl.onlineStore.SQL.DataToConnectToSql;
 import java.sql.*;
 import java.util.InputMismatchException;
