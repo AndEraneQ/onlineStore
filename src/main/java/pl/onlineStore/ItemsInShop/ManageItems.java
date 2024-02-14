@@ -1,8 +1,6 @@
 package pl.onlineStore.ItemsInShop;
 
 import pl.onlineStore.SQL.DataToConnectToSql;
-
-import java.awt.*;
 import java.sql.*;
 import java.util.ArrayList;
 

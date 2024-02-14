@@ -3,6 +3,7 @@ package pl.onlineStore.menu;
 import pl.onlineStore.AdminActions.AddOrDeleteAdminRightsAction;
 import pl.onlineStore.AdminActions.AddOrDeleteItemsAction;
 import pl.onlineStore.AdminActions.AddOrDeleteShoppingCategory;
+import pl.onlineStore.AdminActions.EditItemsDataAction;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -84,7 +85,8 @@ public class AdminChoicesHandler {
 
         }
         public void editItemsDataInShop(){
-
+            EditItemsDataAction editItemsDataAction = new EditItemsDataAction();
+            editItemsDataAction.editItemsRun();
         }
         public void AddOrDeleteNewCategoryInShop() {
             int choice = 0;

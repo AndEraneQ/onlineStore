@@ -11,11 +11,10 @@ public class AdminMenu {
         System.out.println("Choose an option:");
         System.out.println("1 - Add or delete someone admin rights.");
         System.out.println("2 - Add or delete item to shop");
-        System.out.println("3 - Add or substract existing item in shop");
-        System.out.println("4 - Edit items data in shop");
-        System.out.println("5 - Add or delete new category in shop");
-        System.out.println("6 - Logout");
-        System.out.println("7 - Exit");
+        System.out.println("3 - Edit items data in shop");
+        System.out.println("4 - Add or delete new category in shop");
+        System.out.println("5 - Logout");
+        System.out.println("6 - Exit");
     }
     public void adminMenuOptions(){
         Admin admin = AdminDataSingleton.getInstance().getAdmin();
@@ -36,19 +35,16 @@ public class AdminMenu {
                         adminChoicesHandler.addOrDeleteItemsInShop();
                         break;
                     case 3:
-                        adminChoicesHandler.addOrSubstractExistingItemInShop();
-                        break;
-                    case 4:
                         adminChoicesHandler.editItemsDataInShop();
                         break;
-                    case 5:
+                    case 4:
                         adminChoicesHandler.AddOrDeleteNewCategoryInShop();
                         break;
-                    case 6:
+                    case 5:
                         StartingMenu startingMenu = new StartingMenu();
                         startingMenu.run();
                         return;
-                    case 7:
+                    case 6:
                         System.out.println("Thank you, see you soon!");
                         return;
                     default:
