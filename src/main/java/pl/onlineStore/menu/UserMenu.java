@@ -1,4 +1,5 @@
 package pl.onlineStore.menu;
+import pl.onlineStore.ItemsInShop.ManageItems;
 import pl.onlineStore.Singletons.UserDataSingleton;
 import pl.onlineStore.users.User;
 
@@ -8,6 +9,7 @@ import java.util.Scanner;
 public class UserMenu {
     private Scanner scanner = new Scanner(System.in);
     private User user = UserDataSingleton.getInstance().getUser();
+
     private void printStartMenu(){
         System.out.println("Choose an option:");
         System.out.println("1 - Go to the shop");
@@ -22,27 +24,32 @@ public class UserMenu {
         int userChoice = 0;
         boolean userCorrectChoice;
         do{
-            UserChoicesHandler userChoicesHandler = new UserChoicesHandler();
             printStartMenu();
             try {
                 int taskChoosenByUser = scanner.nextInt();
                 userCorrectChoice=true;
+                UserChoiceHandler userChoiceHandler = new UserChoiceHandler();
+                ManageItems manageItems = new ManageItems();
                 switch (taskChoosenByUser) {
                     case 1:
+                        userChoiceHandler.goToShopRun();
                         break;
                     case 2:
-                        userChoicesHandler.ManageBudgedRun();
+                        userChoiceHandler.ManageBudgedRun();
                         break;
                     case 3:
+                        userChoiceHandler.showShoppingHistoryRun();
                         break;
                     case 4:
-                        userChoicesHandler.manageUserDataRun();
+                        userChoiceHandler.manageUserDataRun();
                         break;
                     case 5:
+                        manageItems.clearShoppingList();
                         StartingMenu startingMenu = new StartingMenu();
                         startingMenu.run();
                         return;
                     case 6:
+                        manageItems.clearShoppingList();
                         System.out.println("Thank you, see you soon!");
                         return;
                     default:

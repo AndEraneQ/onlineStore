@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="113476ce-4d78-4952-8273-d26f1803fdc8" name="Changes" comment="asas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteAdminRightsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteAdminLaws.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteItemsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteShoppingCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteShoppingCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/EditItemsDataAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/EditItemsDataAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/ItemsInShop/CollectDataForItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/ItemsInShop/CollectDataForItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/ItemsInShop/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/ItemsInShop/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/ItemsInShop/ManageItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/ItemsInShop/ManageItems.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminChoicesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminChoicesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserChoicesHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/users/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +99,13 @@
       <workItem from="1707832481760" duration="10717000" />
       <workItem from="1707857031488" duration="3278000" />
       <workItem from="1707898067033" duration="24439000" />
-      <workItem from="1707928539132" duration="9790000" />
+      <workItem from="1707928539132" duration="9858000" />
+      <workItem from="1707940086525" duration="52000" />
+      <workItem from="1707990676102" duration="320000" />
+      <workItem from="1707991268283" duration="11041000" />
+      <workItem from="1708004364744" duration="345000" />
+      <workItem from="1708004807401" duration="4190000" />
+      <workItem from="1708016798982" duration="8885000" />
     </task>
     <task id="LOCAL-00001" summary="asas">
       <option name="closed" value="true" />

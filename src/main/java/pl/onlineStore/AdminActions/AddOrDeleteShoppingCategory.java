@@ -8,10 +8,11 @@ import java.util.Scanner;
 public class AddOrDeleteShoppingCategory implements DataToConnectToSql {
     private Scanner scanner = new Scanner(System.in);
     public void addCategory(){
-        System.out.println("Type category to add");
+        System.out.println("Type category");
         String category = scanner.nextLine();
+        Connection connection = null;
         try {
-            Connection connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);
+            connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);
             String checkExistingCategorySQL = "SELECT category FROM shoppingCategory WHERE category = ?";
             PreparedStatement firstStatement = connection.prepareStatement(checkExistingCategorySQL);
             firstStatement.setString(1,category);
@@ -21,20 +22,21 @@ public class AddOrDeleteShoppingCategory implements DataToConnectToSql {
                 PreparedStatement secondStatement = connection.prepareStatement(addCategorySQL);
                 secondStatement.setString(1,category);
                 secondStatement.executeUpdate();
-                System.out.println("Added succesfully");
+                System.out.println("Added successfully");
             }
             else{
-                System.out.println("This category existing!!");
+                System.out.println("This category was existing!!");
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Error during add category: ", e);
         }
     }
     public void removeCategory(){
         System.out.println("Type category to remove");
         String category = scanner.nextLine();
+        Connection connection = null;
         try {
-            Connection connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);
+            connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);
             String sql = "DELETE FROM shoppingCategory WHERE category = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1,category);
@@ -43,10 +45,10 @@ public class AddOrDeleteShoppingCategory implements DataToConnectToSql {
                 System.out.println("Deleted " + category + " category");
             }
             else{
-                System.out.println("This category did not exist.");
+                System.out.println("This category didn't exist.");
             }
         } catch (SQLException ex) {
-            throw new RuntimeException(ex);
+            throw new RuntimeException("Error during delete category: ", ex);
         }
     }
 }

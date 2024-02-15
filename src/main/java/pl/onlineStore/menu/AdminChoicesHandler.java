@@ -1,7 +1,7 @@
 package pl.onlineStore.menu;
 
-import pl.onlineStore.AdminActions.AddOrDeleteAdminRightsAction;
-import pl.onlineStore.AdminActions.AddOrDeleteItemsAction;
+import pl.onlineStore.AdminActions.AddOrDeleteAdminLaws;
+import pl.onlineStore.AdminActions.AddOrDeleteItems;
 import pl.onlineStore.AdminActions.AddOrDeleteShoppingCategory;
 import pl.onlineStore.AdminActions.EditItemsDataAction;
 
@@ -29,13 +29,13 @@ public class AdminChoicesHandler {
                     scanner.nextLine();
                 }
                 if (choiceIsCorrect) {
-                    AddOrDeleteAdminRightsAction addOrDeleteAdminRightsAction = new AddOrDeleteAdminRightsAction();
+                    AddOrDeleteAdminLaws addOrDeleteAdminRightsAction = new AddOrDeleteAdminLaws();
                     switch (choice) {
                         case 1:
-                            addOrDeleteAdminRightsAction.addLaws();
+                            addOrDeleteAdminRightsAction.addAdminLaws();
                             break;
                         case 2:
-                            addOrDeleteAdminRightsAction.deleteLaws();
+                            addOrDeleteAdminRightsAction.deleteAdminLaws();
                             break;
                         case 3:
                             System.out.println("Backing to menu.");
@@ -62,7 +62,7 @@ public class AdminChoicesHandler {
                     scanner.nextLine();
                 }
                 if (choiceIsCorrect) {
-                    AddOrDeleteItemsAction addOrDeleteItemsAction = new AddOrDeleteItemsAction();
+                    AddOrDeleteItems addOrDeleteItemsAction = new AddOrDeleteItems();
                     switch (choice) {
                         case 1:
                             addOrDeleteItemsAction.addItem();
