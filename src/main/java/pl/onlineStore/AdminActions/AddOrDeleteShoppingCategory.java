@@ -1,5 +1,5 @@
 package pl.onlineStore.AdminActions;
-
+import pl.onlineStore.choices.Choice;
 import pl.onlineStore.SQL.DataToConnectToSql;
 
 import java.sql.*;
@@ -7,9 +7,10 @@ import java.util.Scanner;
 
 public class AddOrDeleteShoppingCategory implements DataToConnectToSql {
     private Scanner scanner = new Scanner(System.in);
+    private Choice choice = new Choice();
     public void addCategory(){
         System.out.println("Type category");
-        String category = scanner.nextLine();
+        String category = choice.getStringChoice();
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);
@@ -33,7 +34,7 @@ public class AddOrDeleteShoppingCategory implements DataToConnectToSql {
     }
     public void removeCategory(){
         System.out.println("Type category to remove");
-        String category = scanner.nextLine();
+        String category = choice.getStringChoice();
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);

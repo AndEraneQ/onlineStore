@@ -1,5 +1,5 @@
 package pl.onlineStore.AdminActions;
-
+import pl.onlineStore.choices.Choice;
 import pl.onlineStore.ItemsInShop.CollectDataForItems;
 import pl.onlineStore.ItemsInShop.Item;
 import pl.onlineStore.SQL.DataToConnectToSql;
@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.Scanner;
 
 public class AddOrDeleteItems implements DataToConnectToSql {
     public void addItem() {
@@ -40,8 +39,8 @@ public class AddOrDeleteItems implements DataToConnectToSql {
     public void removeItem(){
         System.out.println("Deleting item.");
         System.out.println("Type item to delete: ");
-        Scanner scanner = new Scanner(System.in);
-        String itemToDelete = scanner.nextLine();
+        Choice choice = new Choice();
+        String itemToDelete = choice.getStringChoice();
         Connection connection = null;
         try{
             connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);

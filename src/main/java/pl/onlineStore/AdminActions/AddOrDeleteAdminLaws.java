@@ -1,14 +1,12 @@
 package pl.onlineStore.AdminActions;
-
+import pl.onlineStore.choices.Choice;
 import pl.onlineStore.SQL.DataToConnectToSql;
 import pl.onlineStore.Singletons.AdminDataSingleton;
 import pl.onlineStore.users.Admin;
 import java.sql.*;
-import java.util.Scanner;
 
 public class AddOrDeleteAdminLaws implements DataToConnectToSql {
     private Admin admin = AdminDataSingleton.getInstance().getAdmin();
-
     public void addAdminLaws(){
         String login = collectLogin("admin");
         setUserOrAdminLaws(login, "admin");
@@ -18,9 +16,9 @@ public class AddOrDeleteAdminLaws implements DataToConnectToSql {
         setUserOrAdminLaws(login, "user");
     }
     private String collectLogin(String typeOfUserToSetLater) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Type login to changes laws: ");
-        String loginToChangeLaws = scanner.nextLine();
+        Choice choice = new Choice();
+        String loginToChangeLaws = choice.getStringChoice();
         if (loginToChangeLaws.equals(admin.getLogin())) {
             System.out.println("You cant modify your own laws!");
             return "admin";

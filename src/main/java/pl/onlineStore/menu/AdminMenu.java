@@ -1,13 +1,13 @@
 package pl.onlineStore.menu;
+
+import pl.onlineStore.choices.Choice;
 import pl.onlineStore.users.Admin;
 import pl.onlineStore.Singletons.AdminDataSingleton;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 public class AdminMenu {
-    private Scanner scanner = new Scanner(System.in);
-    private void printStartMenu(){
+    private Choice choice = new Choice();
+
+    private void printStartMenu() {
         System.out.println("Choose an option:");
         System.out.println("1 - Add or delete someone admin rights.");
         System.out.println("2 - Add or delete item to shop");
@@ -16,61 +16,53 @@ public class AdminMenu {
         System.out.println("5 - Logout");
         System.out.println("6 - Exit");
     }
-    public void adminMenuOptions(){
+
+    public void adminMenuOptionRun() {
         Admin admin = AdminDataSingleton.getInstance().getAdmin();
         System.out.println("Welcome in " + admin.getLogin() + " account.");
-        int userChoice = 0;
-        boolean userCorrectChoice;
-        do{
-            AdminChoicesHandler adminChoicesHandler = new AdminChoicesHandler();
+        AdminChoicesHandler adminChoicesHandler = new AdminChoicesHandler();
+        int userChoice;
+        while (true) {
             printStartMenu();
-            try {
-                int taskChoosenByUser = scanner.nextInt();
-                userCorrectChoice=true;
-                switch (taskChoosenByUser) {
-                    case 1:
-                        adminChoicesHandler.addOrDeleteAdminRights();
-                        break;
-                    case 2:
-                        adminChoicesHandler.addOrDeleteItemsInShop();
-                        break;
-                    case 3:
-                        adminChoicesHandler.editItemsDataInShop();
-                        break;
-                    case 4:
-                        adminChoicesHandler.AddOrDeleteNewCategoryInShop();
-                        break;
-                    case 5:
-                        StartingMenu startingMenu = new StartingMenu();
-                        startingMenu.run();
-                        return;
-                    case 6:
-                        System.out.println("Thank you, see you soon!");
-                        return;
-                    default:
-                        System.out.println("Invalid choice. Please try again");
-                        userCorrectChoice=false;
-                        break;
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("You need to write a number! Please try again");
-                userCorrectChoice=false;
-                scanner.nextLine();
+            userChoice = choice.getIntChoice();
+            switch (userChoice) {
+                case 1:
+                    adminChoicesHandler.addOrDeleteAdminRights();
+                    break;
+                case 2:
+                    adminChoicesHandler.addOrDeleteItemsInShop();
+                    break;
+                case 3:
+                    adminChoicesHandler.editItemsDataInShop();
+                    break;
+                case 4:
+                    adminChoicesHandler.AddOrDeleteNewCategoryInShop();
+                    break;
+                case 5:
+                    StartingMenu startingMenu = new StartingMenu();
+                    startingMenu.run();
+                    return;
+                case 6:
+                    System.out.println("Thank you, see you soon!");
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again");
+                    break;
             }
-        } while(!userCorrectChoice || userChoice!=6 || userChoice!=7);
+        }
     }
-    public void run(){
+
+    public void run() {
         String userChoice;
         do {
-            System.out.println("Choose whether you want to log in as an admin or a user.");
-            userChoice = scanner.nextLine();
-        } while(!userChoice.equals("admin") && !userChoice.equals("user"));
-        if(userChoice.equals("user")){
+            System.out.println("Please choose type of login (admin or user)");
+            userChoice = choice.getStringChoice();
+        } while (!userChoice.equals("admin") && !userChoice.equals("user"));
+        if (userChoice.equals("user")) {
             UserMenu userMenu = new UserMenu();
             userMenu.run();
-        }
-        else{
-            adminMenuOptions();
+        } else {
+            adminMenuOptionRun();
         }
     }
 }

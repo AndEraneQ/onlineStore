@@ -2,14 +2,14 @@ package pl.onlineStore.AdminActions;
 import pl.onlineStore.ItemsInShop.CollectDataForItems;
 import pl.onlineStore.ItemsInShop.ManageItems;
 import pl.onlineStore.SQL.DataToConnectToSql;
+import pl.onlineStore.choices.Choice;
+
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class EditItemsDataAction implements DataToConnectToSql {
     private CollectDataForItems collectDataForItems = new CollectDataForItems();
-    private Scanner scanner = new Scanner(System.in);
+    private Choice choice = new Choice();
     private String editingCategory;
     private String editingDataName;
     private void displayEditMenu(){
@@ -24,7 +24,7 @@ public class EditItemsDataAction implements DataToConnectToSql {
             System.out.println("Select category: ");
             editingCategory = collectDataForItems.collectCategory();
             ManageItems manageItems = new ManageItems();
-            ArrayList<String> listOfItemsInCategory = manageItems.collectListOfItemsFromCategory(editingCategory);
+            ArrayList<String> listOfItemsInCategory = manageItems.collectListOfItemsNamesFromCategory(editingCategory);
             if(listOfItemsInCategory.size()==0){
                 System.out.println("There is 0 items in this category");
                 return;
@@ -36,7 +36,7 @@ public class EditItemsDataAction implements DataToConnectToSql {
                     System.out.print(nameOfItem + " ");
                 }
                 System.out.println();
-                editingDataName = scanner.nextLine();
+                editingDataName = choice.getStringChoice();
                 for(String nameOfItem : listOfItemsInCategory){
                     if(nameOfItem.equals(editingDataName)){
                         editingDataIsCorrect=true;
@@ -45,36 +45,29 @@ public class EditItemsDataAction implements DataToConnectToSql {
             } while(!editingDataIsCorrect);
         boolean validChoice;
         do {
-            validChoice =true;
+            validChoice = true;
             displayEditMenu();
-            try {
-                int choice = scanner.nextInt();
-                switch (choice) {
-                    case 1:
-                        editName();
-                        break;
-                    case 2:
-                        editCategory();
-                        break;
-                    case 3:
-                        editPrice();
-                        break;
-                    case 4:
-                        editQuantity();
-                        break;
-                    case 5:
-                        System.out.println("Going back");
-                        return;
-                    default:
-                        System.out.println("Please enter a correct number!!");
-                        scanner.nextLine();
-                        validChoice =false;
-                        break;
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("You need to write a number! Please try again");
-                validChoice =false;
-                scanner.nextLine();
+            int userChoice = choice.getIntChoice();
+            switch (userChoice) {
+                case 1:
+                    editName();
+                    break;
+                case 2:
+                    editCategory();
+                    break;
+                case 3:
+                    editPrice();
+                    break;
+                case 4:
+                    editQuantity();
+                    break;
+                case 5:
+                    System.out.println("Going back");
+                    return;
+                default:
+                    System.out.println("Please enter a correct number!!");
+                    validChoice = false;
+                    break;
             }
         }while(!validChoice);
     }

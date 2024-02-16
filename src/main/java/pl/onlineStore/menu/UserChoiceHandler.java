@@ -1,14 +1,14 @@
 package pl.onlineStore.menu;
+
 import pl.onlineStore.UserActions.GoToTheShopAction;
 import pl.onlineStore.UserActions.ShowPurchaseHistoryAction;
 import pl.onlineStore.UserActions.UserManageBudgetAction;
 import pl.onlineStore.UserActions.UserManageUserDataAction;
+import pl.onlineStore.choices.Choice;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class UserChoiceHandler {
-    private Scanner scanner = new Scanner(System.in);
+    private Choice choice = new Choice();
 
     private void printManageBudgetMenu() {
         System.out.println("Manage you budget!!!");
@@ -34,37 +34,26 @@ public class UserChoiceHandler {
     }
 
     public void manageUserDataRun() {
-        int choice = 0;
-        boolean choiceIsCorrect;
-        do {
-            choiceIsCorrect = true;
+        int userChoice;
+        UserManageUserDataAction userManageUserDataAction = new UserManageUserDataAction();
+        while (true) {
             printManageUserDataMenu();
-            try {
-                choice = scanner.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("You need to write a number! Please try again");
-                choiceIsCorrect = false;
-                scanner.nextLine();
+            userChoice = choice.getIntChoice();
+            switch (userChoice) {
+                case 1:
+                    userManageUserDataAction.showUserData();
+                    break;
+                case 2:
+                    userManageUserDataAction.editUserData();
+                    break;
+                case 3:
+                    System.out.println("Backing to menu.");
+                    return;
+                default:
+                    System.out.println("Invalid choice. Try again");
+                    break;
             }
-            if (choiceIsCorrect) {
-                UserManageUserDataAction userManageUserDataAction = new UserManageUserDataAction();
-                switch (choice) {
-                    case 1:
-                        userManageUserDataAction.showUserData();
-                        break;
-                    case 2:
-                        userManageUserDataAction.editUserData();
-                        break;
-                    case 3:
-                        System.out.println("Backing to menu.");
-                        return;
-                    default:
-                        System.out.println("Invalid choice. Try again");
-                        choiceIsCorrect = false;
-                        break;
-                }
-            }
-        } while (!choiceIsCorrect || choice != 3);
+        }
     }
 
     public void showShoppingHistoryRun() {
@@ -73,78 +62,57 @@ public class UserChoiceHandler {
     }
 
     public void goToShopRun() {
-        int choice = 0;
-        boolean choiceIsCorrect;
-        do {
-            choiceIsCorrect = true;
+        int userChoice;
+        GoToTheShopAction goToTheShopAction = new GoToTheShopAction();
+        while (true) {
             printGoToTheShopMenu();
-            try {
-                choice = scanner.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("You need to write a number! Please try again");
-                choiceIsCorrect = false;
-                scanner.nextLine();
+            userChoice = choice.getIntChoice();
+            switch (userChoice) {
+                case 1:
+                    goToTheShopAction.addNewProductToYourCart();
+                    break;
+                case 2:
+                    goToTheShopAction.deleteItemFromYourCart();
+                    break;
+                case 3:
+                    goToTheShopAction.checkYourCart();
+                    break;
+                case 4:
+                    goToTheShopAction.buyProductsFromCart();
+                case 5:
+                    System.out.println("Backing to menu.");
+                    return;
+                default:
+                    System.out.println("Invalid choice. Try again");
+                    break;
             }
-            if (choiceIsCorrect) {
-                GoToTheShopAction goToTheShopAction = new GoToTheShopAction();
-                switch (choice) {
-                    case 1:
-                        goToTheShopAction.addNewProductToYourCart();
-                        break;
-                    case 2:
-                        goToTheShopAction.deleteItemFromYourCart();
-                        break;
-                    case 3:
-                        goToTheShopAction.checkYourCart();
-                        break;
-                    case 4:
-                        goToTheShopAction.buyProductsFromCart();
-                    case 5:
-                        System.out.println("Backing to menu.");
-                        return;
-                    default:
-                        System.out.println("Invalid choice. Try again");
-                        choiceIsCorrect = false;
-                        break;
-                }
-            }
-        } while (!choiceIsCorrect || choice != 4);
+        }
     }
 
     public void ManageBudgedRun() {
-        int choice = 0;
-        boolean choiceIsCorrect;
-        do {
-            choiceIsCorrect = true;
+        int userChoice;
+        UserManageBudgetAction userManageBudgetAction = new UserManageBudgetAction();
+        while (true) {
             printManageBudgetMenu();
-            try {
-                choice = scanner.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("You need to write a number! Please try again");
-                choiceIsCorrect = false;
-                scanner.nextLine();
+            userChoice = choice.getIntChoice();
+            switch (userChoice) {
+                case 1:
+                    userManageBudgetAction.depositOrWithdrawMoney('+');
+                    break;
+                case 2:
+                    userManageBudgetAction.depositOrWithdrawMoney('-');
+                    break;
+                case 3:
+                    System.out.println("Your balance is " + userManageBudgetAction.checkMoneyBalance());
+                    break;
+                case 4:
+                    System.out.println("Backing to menu.");
+                    return;
+                default:
+                    System.out.println("Invalid userChoice. Try again");
+                    break;
             }
-            if (choiceIsCorrect) {
-                UserManageBudgetAction userManageBudgetAction = new UserManageBudgetAction();
-                switch (choice) {
-                    case 1:
-                        userManageBudgetAction.depositOrWithdrawMoney('+');
-                        break;
-                    case 2:
-                        userManageBudgetAction.depositOrWithdrawMoney('-');
-                        break;
-                    case 3:
-                        System.out.println("Your balance is " + userManageBudgetAction.checkMoneyBalance());
-                        break;
-                    case 4:
-                        System.out.println("Backing to menu.");
-                        break;
-                    default:
-                        System.out.println("Invalid choice. Try again");
-                        choiceIsCorrect = false;
-                        break;
-                }
-            }
-        } while (!choiceIsCorrect || choice != 4);
+        }
     }
+
 }

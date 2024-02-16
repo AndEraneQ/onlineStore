@@ -15,7 +15,7 @@ public class RegisterSqlConnection implements DataToConnectToSql {
             if(resultSet.next()){
                 String dataBaseLogin = resultSet.getString("login");
                 if(dataBaseLogin.equals(loginToCheck)){
-                    System.out.println("User with login '" + loginToCheck + "' exist. Try again.");
+                    System.out.println("User with login '" + loginToCheck + "' already exist. Try again.");
                     return true;
                 }
             }
@@ -38,13 +38,10 @@ public class RegisterSqlConnection implements DataToConnectToSql {
             statement.setString(7, user.getDateOfBirth());
             statement.setString(8, String.valueOf(user.getPhoneNumber()));
             statement.setString(9, "user");
-            if (statement.executeUpdate() > 0) {
-                return true;
-            }
+            return statement.executeUpdate() > 0;
         } catch (SQLException e){
             throw new RuntimeException(e);
         }
-        return false;
     }
     public boolean addUserToAccountBalanceDataBase(User user){
         try{
@@ -53,12 +50,9 @@ public class RegisterSqlConnection implements DataToConnectToSql {
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, user.getLogin());
             statement.setString(2, String.valueOf(0.00));
-            if (statement.executeUpdate() > 0) {
-                return true;
-            }
+            return statement.executeUpdate() > 0;
         } catch (SQLException e){
             throw new RuntimeException(e);
         }
-        return false;
     }
 }

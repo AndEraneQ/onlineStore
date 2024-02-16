@@ -7,51 +7,49 @@ import java.sql.ResultSet;
 import pl.onlineStore.SQL.DataToConnectToSql;
 import pl.onlineStore.users.Person;
 public class LoginSqlConnection implements DataToConnectToSql {
-    public boolean correctLoginAndPasswordCheck(String login,String password){
-        try{
-            Connection connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);
+    public boolean correctLoginAndPasswordCheck(String login, String password) {
+        Connection connection = null;
+        try {
+            connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
             String sql = "SELECT Password FROM users WHERE login = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, login);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 String storedPassword = resultSet.getString("password");
-                if (storedPassword.equals(password)) {
-                    return true;
-                }
+                return storedPassword.equals(password);
             }
-            connection.close();
-        } catch(SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return false;
     }
+
     public Person CollectAllDataFromDatabase(String login) throws SQLException {
+        Person personToCollectData = null;
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);
+            connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
+            String sql = "SELECT Password, email, firstName, lastName, sex, dateOfBirth, phoneNumber, typeOfUser FROM users WHERE login = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, login);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                String passwordStored = resultSet.getString("password");
+                String emailStored = resultSet.getString("email");
+                String firstNameStored = resultSet.getString("firstName");
+                String lastNameStored = resultSet.getString("lastName");
+                String sexStored = resultSet.getString("sex");
+                String dateOfBirthStored = resultSet.getString("dateOfBirth");
+                String typeOfUserStored = resultSet.getString("typeOfUser");
+                int phoneNumberStored = resultSet.getInt("phoneNumber");
+                personToCollectData = new Person(login, passwordStored, emailStored, firstNameStored, lastNameStored, sexStored, dateOfBirthStored, phoneNumberStored, typeOfUserStored);
+            } else {
+                System.out.println("Collect person Data error");
+            }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
-        String sql = "SELECT Password, email, firstName, lastName, sex, dateOfBirth, phoneNumber, typeOfUser FROM users WHERE login = ?";
-        PreparedStatement statement = connection.prepareStatement(sql);
-        statement.setString(1, login);
-        ResultSet resultSet = statement.executeQuery();
-        String passwordStored = null, emailStored=null, firstNameStored=null, lastNameStored=null, sexStored=null, dateOfBirthStored=null, typeOfUserStored=null;
-        int phoneNumberStored = 0;
-        if (resultSet.next()) {
-            passwordStored = resultSet.getString("password");
-            emailStored = resultSet.getString("email");
-            firstNameStored = resultSet.getString("firstName");
-            lastNameStored = resultSet.getString("lastName");
-            sexStored = resultSet.getString("sex");
-            dateOfBirthStored = resultSet.getString("dateOfBirth");
-            typeOfUserStored = resultSet.getString("typeOfUser");
-            phoneNumberStored = resultSet.getInt("phoneNumber");
-        } else{
-            System.out.println("Collect person Data error");
-        }
-        Person personToCollectData = new Person(login,passwordStored,emailStored,firstNameStored,lastNameStored,sexStored,dateOfBirthStored,phoneNumberStored,typeOfUserStored);
         return personToCollectData;
     }
 }
