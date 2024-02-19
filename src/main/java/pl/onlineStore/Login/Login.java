@@ -25,9 +25,9 @@ public class Login {
                 if (connectionToDatabase.correctLoginAndPasswordCheck(login, password)) {
                     loggedIn = true;
                     Person person = connectionToDatabase.CollectAllDataFromDatabase(login);
+                    User user = new User(person);
+                    UserDataSingleton.getInstance().setUser(user);
                     if (person.getTypeOfUser().equals("user")) {
-                        User user = new User(person);
-                        UserDataSingleton.getInstance().setUser(user);
                         UserMenu userMenu = new UserMenu();
                         userMenu.run();
                     } else {

@@ -1,7 +1,7 @@
 package pl.onlineStore.menu;
 
 import pl.onlineStore.AdminActions.AddOrDeleteAdminLaws;
-import pl.onlineStore.AdminActions.AddOrDeleteItems;
+import pl.onlineStore.AdminActions.AddItemsToShop;
 import pl.onlineStore.AdminActions.AddOrDeleteShoppingCategory;
 import pl.onlineStore.AdminActions.EditItemsDataAction;
 import pl.onlineStore.choices.Choice;
@@ -16,25 +16,8 @@ public class AdminChoicesHandler {
     }
 
     public void addOrDeleteItemsInShop() {
-        int userChoice = 0;
-        while (true) {
-            userChoice = choice.getIntChoice();
-            AddOrDeleteItems addOrDeleteItemsAction = new AddOrDeleteItems();
-            switch (userChoice) {
-                case 1:
-                    addOrDeleteItemsAction.addItem();
-                    break;
-                case 2:
-                    addOrDeleteItemsAction.removeItem();
-                    break;
-                case 3:
-                    System.out.println("Backing to menu.");
-                    return;
-                default:
-                    System.out.println("Invalid userChoice. Try again");
-                    break;
-            }
-        }
+        AddItemsToShop addItemsToShop = new AddItemsToShop();
+        addItemsToShop.addItem();
     }
 
     public void addOrDeleteAdminRights() {

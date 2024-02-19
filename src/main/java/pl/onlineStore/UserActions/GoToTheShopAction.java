@@ -18,7 +18,11 @@ public class GoToTheShopAction implements DataToConnectToSql {
     public void addNewProductToYourCart(){
         CollectDataForItems collectDataForItems = new CollectDataForItems();
         String categoryOfProduct = collectDataForItems.collectCategory();
-        ArrayList<Item> listOfItemsInCategory = new ArrayList<>(manageItems.collectListOfItemsNamesFromCategory(categoryOfProduct));
+        ArrayList<Item> listOfItemsInCategory = new ArrayList<>(manageItems.collectListOfItemsFromOneCategory(categoryOfProduct));
+        if(listOfItemsInCategory.size()==0){
+            System.out.println("This category is empty.");
+            return;
+        }
         Item dataOfItemChoosenbyUser = null;
         while(true){
             System.out.println("Choose name of product from list bellow");
@@ -50,7 +54,7 @@ public class GoToTheShopAction implements DataToConnectToSql {
         user.addElementToList(dataOfItemChoosenbyUser);
     }
     public void checkYourCart(){
-        if(user.getShoppingList()==null){
+        if(user.getShoppingList().size() == 0){
             System.out.println("Your shopping list is empty.");
             return;
         }
@@ -81,13 +85,14 @@ public class GoToTheShopAction implements DataToConnectToSql {
             } else {
                 userManageBudgetAction.depositOrWithdrawMoney('-',sumOfPriceForAllCart);
                 for (Item item : user.getShoppingList()) {
+                    Double price = item.getPrice()*item.getQuantity();
                     Connection connection = DriverManager.getConnection(url,sqlUsername,sqlPassword);
                     String sql2 = "INSERT INTO purchaseHistory VALUES (?,?,?,?)";
                     PreparedStatement statement = connection.prepareStatement(sql2);
                     statement = connection.prepareStatement(sql2);
                     statement.setString(1, user.getLogin());
                     statement.setInt(2, item.getQuantity());
-                    statement.setDouble(3, sumOfPriceForAllCart);
+                    statement.setDouble(3, price);
                     statement.setString(4, item.getName());
                     statement.executeUpdate();
                 }
@@ -99,10 +104,14 @@ public class GoToTheShopAction implements DataToConnectToSql {
         user.clearShoppingList();
     }
     public void deleteItemFromYourCart() {
+        if(user.getShoppingList().size()==0){
+            System.out.println("Your cart is empty.");
+            return;
+        }
         Item itemToDelete = manageItems.collectItemFromList(user.getShoppingList());
         int howMuchDelete = 0;
         while(true) {
-            System.out.println("How much of " + itemToDelete.getName() + " you want delete (You have now" + itemToDelete.getQuantity() + ")");
+            System.out.println("How much of " + itemToDelete.getName() + " you want delete (You have now " + itemToDelete.getQuantity() + ")");
             howMuchDelete = choice.getIntChoice();
             if (howMuchDelete >= 0 && howMuchDelete <= itemToDelete.getQuantity()) {
                 break;

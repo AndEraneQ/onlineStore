@@ -24,11 +24,11 @@ public class StartingMenu {
                 case 1:
                     Login login = new Login();
                     login.run();
-                    break;
+                    return;
                 case 2:
                     Register register = new Register();
                     register.run();
-                    break;
+                    return;
                 case 3:
                     System.out.println("Thank you, see you soon!");
                     return;

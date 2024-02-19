@@ -10,7 +10,7 @@ public class AdminMenu {
     private void printStartMenu() {
         System.out.println("Choose an option:");
         System.out.println("1 - Add or delete someone admin rights.");
-        System.out.println("2 - Add or delete item to shop");
+        System.out.println("2 - Add new item to shop");
         System.out.println("3 - Edit items data in shop");
         System.out.println("4 - Add or delete new category in shop");
         System.out.println("5 - Logout");

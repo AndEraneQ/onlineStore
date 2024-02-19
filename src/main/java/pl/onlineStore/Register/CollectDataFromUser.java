@@ -26,7 +26,7 @@ public class CollectDataFromUser {
 
     public void collectLogin() {
         RegisterSqlConnection sqlRegister = new RegisterSqlConnection();
-        String loginToCheck;
+        String loginToCheck = "";
         while (true) {
             System.out.println("Type login");
             loginToCheck = choice.getStringChoice();

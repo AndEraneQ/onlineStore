@@ -4,7 +4,7 @@ import pl.onlineStore.users.User;
 
 public class UserDataSingleton {
     private static UserDataSingleton instance;
-    private User user;
+    private User user = new User();
     private UserDataSingleton() {}
     public static UserDataSingleton getInstance() {
         if (instance == null) {

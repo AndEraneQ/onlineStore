@@ -74,4 +74,12 @@ public class CollectDataForItems implements DataToConnectToSql {
             }
         }
     }
+    public Item collectAllDataForItem(){
+        Item item = new Item();
+        item.setName(collectName());
+        item.setCategory(collectCategory());
+        item.setPrice(collectPrice());
+        item.setQuantity(collectHowMuch());
+        return item;
+    }
 }

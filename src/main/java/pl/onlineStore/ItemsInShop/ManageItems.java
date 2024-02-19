@@ -91,6 +91,7 @@ public class ManageItems implements DataToConnectToSql {
             for (Item item : user.getShoppingList()) {
                 System.out.print(item.getName() + " ");
             }
+            System.out.println();
             nameOfItem = choice.getStringChoice();
             for (Item item : user.getShoppingList()) {
                 if (nameOfItem.equals(item.getName())) {

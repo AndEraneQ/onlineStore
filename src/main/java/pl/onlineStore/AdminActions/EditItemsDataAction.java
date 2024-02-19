@@ -14,11 +14,10 @@ public class EditItemsDataAction implements DataToConnectToSql {
     private String editingDataName;
     private void displayEditMenu(){
         System.out.println("Choose what you want to change: ");
-        System.out.println("1 - edit name");
-        System.out.println("2 - edit category");
-        System.out.println("3 - edit price");
-        System.out.println("4 - edit quantity");
-        System.out.println("5 - back");
+        System.out.println("1 - edit category");
+        System.out.println("2 - edit price");
+        System.out.println("3 - edit quantity");
+        System.out.println("4 - back");
     }
     public void editItemsRun(){
             System.out.println("Select category: ");
@@ -50,18 +49,15 @@ public class EditItemsDataAction implements DataToConnectToSql {
             int userChoice = choice.getIntChoice();
             switch (userChoice) {
                 case 1:
-                    editName();
-                    break;
-                case 2:
                     editCategory();
                     break;
-                case 3:
+                case 2:
                     editPrice();
                     break;
-                case 4:
+                case 3:
                     editQuantity();
                     break;
-                case 5:
+                case 4:
                     System.out.println("Going back");
                     return;
                 default:
@@ -70,10 +66,6 @@ public class EditItemsDataAction implements DataToConnectToSql {
                     break;
             }
         }while(!validChoice);
-    }
-    public void editName(){
-        String name = collectDataForItems.collectName();
-        addToDatabaseEditedData("name",name);
     }
     public void editPrice(){
         double price = collectDataForItems.collectPrice();

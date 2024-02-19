@@ -37,39 +37,22 @@ public class UserManageBudgetAction implements DataToConnectToSql {
             currentMoneyInAccount = checkMoneyBalance();
             if (moneyWrittenByUser.startsWith("0") || !moneyWrittenByUser.matches("[0-9]+(\\.[0-9]{1,2})?")) {
                 System.out.println("Wrong type of number. Please type it correctly");
+                continue;
             } else if (operation == '-' && Double.parseDouble(moneyWrittenByUser) > currentMoneyInAccount) {
                 System.out.println("Your balance is " + currentMoneyInAccount + ". Please type correct number.");
             } else {
                 break;
             }
-            try {
-                Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
-                String sql = "UPDATE accountBalance SET balance = balance " + operation + " ? WHERE login = ?";
-                PreparedStatement statement = connection.prepareStatement(sql);
-                Double moneyToDouble = Double.parseDouble(moneyWrittenByUser);
-                statement.setDouble(1, moneyToDouble);
-                statement.setString(2, user.getLogin());
-                if (statement.executeUpdate() > 0) {
-                    System.out.println(operation + " " + moneyWrittenByUser + " To your account");
-                } else {
-                    System.out.println("Error with deposit moneyWrittenByUser.");
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-    }
-
-    public void depositOrWithdrawMoney(Character operation, double howMuch) {
-        Connection connection = null;
         try {
-            connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
+            Connection connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
             String sql = "UPDATE accountBalance SET balance = balance " + operation + " ? WHERE login = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setDouble(1, howMuch);
+            Double moneyToDouble = Double.parseDouble(moneyWrittenByUser);
+            statement.setDouble(1, moneyToDouble);
             statement.setString(2, user.getLogin());
             if (statement.executeUpdate() > 0) {
-                return;
+                System.out.println(operation + " " + moneyWrittenByUser + " To your account");
             } else {
                 System.out.println("Error with deposit moneyWrittenByUser.");
             }
@@ -77,5 +60,23 @@ public class UserManageBudgetAction implements DataToConnectToSql {
             e.printStackTrace();
         }
     }
+
+public void depositOrWithdrawMoney(Character operation, double howMuch) {
+    Connection connection = null;
+    try {
+        connection = DriverManager.getConnection(url, sqlUsername, sqlPassword);
+        String sql = "UPDATE accountBalance SET balance = balance " + operation + " ? WHERE login = ?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setDouble(1, howMuch);
+        statement.setString(2, user.getLogin());
+        if (statement.executeUpdate() > 0) {
+            return;
+        } else {
+            System.out.println("Error with deposit moneyWrittenByUser.");
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
 }
 

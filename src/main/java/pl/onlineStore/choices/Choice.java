@@ -27,7 +27,6 @@ public class Choice {
                     throw new InputMismatchException("Empty input. Please enter a valid string.");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Invalid input: " + e.getMessage());
                 continue;
             }
             break;

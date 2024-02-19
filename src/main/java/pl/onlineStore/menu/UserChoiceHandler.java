@@ -79,6 +79,7 @@ public class UserChoiceHandler {
                     break;
                 case 4:
                     goToTheShopAction.buyProductsFromCart();
+                    break;
                 case 5:
                     System.out.println("Backing to menu.");
                     return;

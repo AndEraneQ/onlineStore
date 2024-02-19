@@ -6,26 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="113476ce-4d78-4952-8273-d26f1803fdc8" name="Changes" comment="asas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteAdminLaws.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteAdminLaws.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteShoppingCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteShoppingCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddOrDeleteItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/AddItemsToShop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/EditItemsDataAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/AdminActions/EditItemsDataAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/ItemsInShop/CollectDataForItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/ItemsInShop/CollectDataForItems.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/ItemsInShop/ManageItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/ItemsInShop/ManageItems.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Login/LoginSqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Login/LoginSqlConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/CollectDataFromUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/CollectDataFromUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/RegisterSqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Register/RegisterSqlConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Singletons/UserDataSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/Singletons/UserDataSingleton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/UserActions/GoToTheShopAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/UserActions/GoToTheShopAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/UserActions/ShowPurchaseHistoryAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/UserActions/ShowPurchaseHistoryAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/UserActions/UserManageBudgetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/UserActions/UserManageBudgetAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/UserActions/UserManageUserDataAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/UserActions/UserManageUserDataAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/choices/Choice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/choices/Choice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminChoicesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminChoicesHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/AdminMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/StartingMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/StartingMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserChoiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserChoiceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/onlineStore/menu/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +73,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -118,7 +114,10 @@
       <workItem from="1708004364744" duration="345000" />
       <workItem from="1708004807401" duration="4190000" />
       <workItem from="1708016798982" duration="10673000" />
-      <workItem from="1708066144378" duration="12322000" />
+      <workItem from="1708066144378" duration="19088000" />
+      <workItem from="1708166635340" duration="9294000" />
+      <workItem from="1708336419446" duration="47000" />
+      <workItem from="1708340023033" duration="1309000" />
     </task>
     <task id="LOCAL-00001" summary="asas">
       <option name="closed" value="true" />
