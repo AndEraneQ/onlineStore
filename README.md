@@ -1,5 +1,8 @@
 # Learn more about me 😎: [My Profile](https://github.com/AndEraneQ)
 
+## 💻 Tech Stack:
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white) <br/>
+
 ## About the project 😊:
 
 The project relies on two main user roles: administrator and regular user. For administrators:
