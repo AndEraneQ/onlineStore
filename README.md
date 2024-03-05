@@ -26,10 +26,12 @@ Firstly when we start the application we see menu: <br/>
 Ofcorse we can login and register. If we login it depends if our accound have admin or user permision. If admin you will need to type if you want to log in as a user or an admin. <br/>
 ![](READMEphotos/userWindow.png) <br/>
 If u have user permission you dont have to type enything and you got logged on your accound. So you have 4 options: 
-1 - Go To Shop
+1 - Go To Shop <br/>
 2 - Manage your budget <br/>
 ![](READMEphotos/manageYourBudget.png) <br/>
-3 - Show purchase history
-4 - Manage your data
+Now you can see how all options work: <br/>
+![](READMEphotos/manageBudgetHowWorks) <br/>
+3 - Show purchase history <br/>
+4 - Manage your data <br/>
 
 
