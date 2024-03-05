@@ -47,3 +47,9 @@ If u have user permission you dont have to type enything and you got logged on y
 4 - Add or delete shopping category ☑️<br/>
 ![](READMEphotos/Category.png) <br/>
 
+## Sum Up the project 🤘✨
+I haven't described every step that happens here in detail because you can see how the program works. <br/>
+Naturally, everything is secured to ensure that the user inputs correct data.  <br/>
+Additionally, all data is stored and retrieved from a MySQL database, and the program itself is written entirely in Java. <br/>
+As mentioned earlier, I plan to add a GUI in the future and further develop the application. Thank you for watching! 🥳
+
