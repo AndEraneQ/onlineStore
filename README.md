@@ -19,3 +19,5 @@ For regular users:
 
 ## Main information about project 😥.
 Unfortunately, the application is console-based, but I plan to add a GUI in the future as soon as I learn it. However, this project includes Java code structures along with MySQL database connections. <br/>
+
+## How it works?
