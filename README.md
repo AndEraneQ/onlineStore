@@ -22,3 +22,5 @@ Unfortunately, the application is console-based, but I plan to add a GUI in the 
 
 ## How it works 🤪?
 Firstly when we start the application we see menu: 
+(README photos/menu.png)
+
