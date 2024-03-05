@@ -16,3 +16,6 @@ For regular users:
 
 ## 💻 Tech Stack:
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white) <br/>
+
+## Main information about project 😥.
+Unfortunately, the application is console-based, but I plan to add a GUI in the future as soon as I learn it. However, this project includes Java code structures along with MySQL database connections. <br/>
