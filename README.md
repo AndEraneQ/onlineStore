@@ -25,12 +25,24 @@ Firstly when we start the application we see menu: <br/>
 ![](READMEphotos/menu.png) <br/>
 Ofcorse we can login and register. If we login it depends if our accound have admin or user permision. If admin you will need to type if you want to log in as a user or an admin. <br/>
 ![](READMEphotos/userWindow.png) <br/>
-If u have user permission you dont have to type enything and you got logged on your accound. So you have 4 options: 
-1 - Go To Shop <br/>
-2 - Manage your budget <br/>
+If u have user permission you dont have to type enything and you got logged on your accound. So you have 4 options: <br/>
+1 - Go To Shop ☑️<br/>
+![](READMEphotos/Shop.png) <br/>
+2 - Manage your budget ☑️<br/>
 ![](READMEphotos/ManageBudget.png) <br/>
-3 - Show purchase history <br/>
-4 - Manage your data <br/>
+3 - Show purchase history ☑️<br/>
+![](READMEphotos/ShoppingHistory.png) <br/>
+4 - Manage your data ☑️<br/>
 ![](READMEphotos/ManageData.png) <br/>
 
+As an admin you have also 4 options: <br/>
+![](READMEphotos/adminMenu.png) <br/>
+1 - Add or delete somoone admin rights ☑️<br/>
+![](READMEphotos/AdminLaws.png) <br/>
+2 - Add new Item to shop ☑️<br/>
+![](READMEphotos/AddItem.png) <br/>
+3 - Edit items data in shop ☑️<br/>
+![](READMEphotos/EditItem.png) <br/>
+4 - Add or delete shopping category ☑️<br/>
+![](READMEphotos/Category.png) <br/>
 
