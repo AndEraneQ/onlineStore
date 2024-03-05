@@ -24,9 +24,9 @@ Unfortunately, the application is console-based, but I plan to add a GUI in the 
 Firstly when we start the application we see menu: <br/>
 ![](READMEphotos/menu.png) <br/>
 Ofcorse we can login and register. If we login it depends if our accound have admin or user permision. If admin you will need to type if you want to log in as a user or an admin. <br/>
-![](READMEphotos/userWindow.png) <br/>
 If u have user permission you dont have to type enything and you got logged on your accound. <br/>
-## So as user you have 4 options: <br/>
+## So as user you have 4 options <br/>
+![](READMEphotos/userWindow.png) <br/>
 1 - Go To Shop ☑️<br/>
 ![](READMEphotos/Shop.png) <br/>
 2 - Manage your budget ☑️<br/>
@@ -36,7 +36,7 @@ If u have user permission you dont have to type enything and you got logged on y
 4 - Manage your data ☑️<br/>
 ![](READMEphotos/ManageData.png) <br/>
 
-## As an admin you have also 4 options: <br/>
+## As an admin you have also 4 options <br/>
 ![](READMEphotos/adminMenu.png) <br/>
 1 - Add or delete somoone admin rights ☑️<br/>
 ![](READMEphotos/AdminLaws.png) <br/>
