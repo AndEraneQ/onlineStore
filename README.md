@@ -28,10 +28,9 @@ Ofcorse we can login and register. If we login it depends if our accound have ad
 If u have user permission you dont have to type enything and you got logged on your accound. So you have 4 options: 
 1 - Go To Shop <br/>
 2 - Manage your budget <br/>
-![](READMEphotos/manageYourBudget.png) <br/>
-Now you can see how all options work: <br/>
-![](READMEphotos/ManageBudgetHowWorks.png) <br/>
+![](READMEphotos/manageBudget.png) <br/>
 3 - Show purchase history <br/>
 4 - Manage your data <br/>
+![](READMEphotos/manageData.png) <br/>
 
 
