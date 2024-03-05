@@ -30,7 +30,7 @@ If u have user permission you dont have to type enything and you got logged on y
 2 - Manage your budget <br/>
 ![](READMEphotos/manageYourBudget.png) <br/>
 Now you can see how all options work: <br/>
-![](READMEphotos/ManageBudgetHowWorks) <br/>
+![](READMEphotos/ManageBudgetHowWorks.png) <br/>
 3 - Show purchase history <br/>
 4 - Manage your data <br/>
 
