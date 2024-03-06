@@ -28,7 +28,7 @@ If u have user permission you dont have to type enything and you got logged on y
 ## So as user you have 4 options <br/>
 ![](READMEphotos/userWindow.png) <br/>
 1 - Go To Shop ☑️<br/>
-![](READMEphotos/Shop.png) <br/>
+![](READMEphotos/Shoppp.png) <br/>
 2 - Manage your budget ☑️<br/>
 ![](READMEphotos/ManageBudget.png) <br/>
 3 - Show purchase history ☑️<br/>
